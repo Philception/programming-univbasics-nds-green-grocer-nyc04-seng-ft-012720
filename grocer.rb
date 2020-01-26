@@ -99,6 +99,10 @@ def apply_clearance(cart)
   cart
 end
 
+def items_total_cost(i)
+  i[:count] * i[:price]
+end
+
 def checkout(cart, coupons)
   # Consult README for inputs and outputs
   #
@@ -122,8 +126,4 @@ def checkout(cart, coupons)
   end
 
   total >= 100 ? total * (1.0 - BIG_PURCHASE_DISCOUNT_RATE) : total
-end
-
-def items_total_cost(i)
-  i[:count] * i[:price]
 end
