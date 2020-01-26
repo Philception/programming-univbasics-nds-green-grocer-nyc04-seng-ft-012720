@@ -40,7 +40,7 @@ end
 
 
 
-def coupon_method(c)
+def mk_coupon_hash(c)
   rounded_unit_price = (c[:cost].to_f * 1.0 / c[:num]).round(2)
   {
     :item => "#{c[:item]} W/COUPON",
