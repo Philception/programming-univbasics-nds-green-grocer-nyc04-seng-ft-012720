@@ -53,7 +53,7 @@ end
 
 def apply_coupon_to_cart(matching_item, coupon, cart)
   matching_item[:count] -= coupon[:num]
-  item_with_coupon = apply(coupon)
+  item_with_coupon = apply_coupon_amount(coupon)
   item_with_coupon[:clearance] = matching_item[:clearance]
   cart << item_with_coupon
 end
